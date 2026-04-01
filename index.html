@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3D Smart Form</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Three.js -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="toggle" onclick="toggleMode()">🌗</div>
+
+<div class="container">
+  <h2>Signup Form</h2>
+
+  <div class="input-group">
+    <input type="text" id="name" placeholder=" " required>
+    <label>Full Name</label>
+  </div>
+
+  <div class="input-group">
+    <input type="text" id="email" placeholder=" " required>
+    <label>Email</label>
+    <span id="tick" class="tick">✔</span>
+  </div>
+
+  <div class="input-group">
+    <input type="password" id="password" placeholder=" " required>
+    <label>Password</label>
+
+```
+<div class="strength-bar">
+  <div id="strengthFill" class="strength-fill"></div>
+</div>
+
+<div id="strengthText" class="strength-text"></div>
+```
+
+  </div>
+
+<button onclick="submitForm()">Submit</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

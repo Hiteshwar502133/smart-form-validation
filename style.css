@@ -1,0 +1,133 @@
+:root {
+--card: rgba(255,255,255,0.1);
+--text: #000000;
+}
+
+.light-mode {
+--card: rgba(255,255,255,0.85);
+--text: #000;
+}
+
+body {
+margin: 0;
+overflow: hidden;
+font-family: 'Segoe UI', sans-serif;
+}
+
+canvas {
+position: fixed;
+top: 0;
+left: 0;
+z-index: -1;
+}
+
+/* Glass UI */
+.container {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+backdrop-filter: blur(15px);
+background: var(--card);
+padding: 30px;
+width: 350px;
+border-radius: 15px;
+box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+color: var(--text);
+animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+from {opacity:0; transform: translate(-50%, -60%);}
+to {opacity:1; transform: translate(-50%, -50%);}
+}
+
+h2 {
+text-align: center;
+}
+
+/* Floating labels */
+.input-group {
+position: relative;
+margin: 20px 0;
+}
+
+.input-group input {
+width: 100%;
+padding: 12px;
+border: 1px solid #aaa;
+border-radius: 6px;
+background: transparent;
+color: var(--text);
+outline: none;
+}
+
+.input-group label {
+position: absolute;
+left: 10px;
+top: 50%;
+transform: translateY(-50%);
+color: #aaa;
+transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+top: -8px;
+font-size: 12px;
+color: cyan;
+}
+
+/* Tick */
+.tick {
+position: absolute;
+right: 10px;
+top: 12px;
+color: #00ff88;
+display: none;
+}
+
+/* Strength bar */
+.strength-bar {
+height: 6px;
+background: #ccc;
+border-radius: 5px;
+margin-top: 6px;
+}
+
+.strength-fill {
+height: 100%;
+width: 0%;
+border-radius: 5px;
+transition: 0.4s;
+}
+
+.strength-text {
+font-size: 12px;
+margin-top: 5px;
+}
+
+/* Button */
+button {
+width: 100%;
+padding: 12px;
+border: none;
+background: cyan;
+border-radius: 6px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+button:hover {
+transform: scale(1.05);
+background: #00bcd4;
+}
+
+/* Toggle */
+.toggle {
+position: absolute;
+top: 20px;
+right: 20px;
+color: white;
+cursor: pointer;
+}
